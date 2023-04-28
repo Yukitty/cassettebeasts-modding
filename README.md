@@ -8,3 +8,5 @@ This repository's license applies to the included assets only, and only to such 
 
 Extract `CassetteBeasts.pck` to the `CassetteBeasts` folder. This repo only tracks the `CassetteBeasts/mods` sub-folder, so keep your mods clean!
 
+[Read the Cassette Beasts wiki for more information.](https://wiki.cassettebeasts.com/wiki/Modding/Mod_Developer_Guide)
+
