@@ -1,0 +1,29 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/snow_tree_foliage_4b.png" type="Texture" id=1]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/snow_tree_foliage_3.png" type="Texture" id=2]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/snow_tree_foliage_1.png" type="Texture" id=3]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/snow_tree_foliage_1.tres" type="Material" id=4]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/snow_tree_foliage_2.png" type="Texture" id=5]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/tree1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/snow_tree_foliage_3.tres" type="Material" id=7]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/snow_tree_foliage_2.tres" type="Material" id=8]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/snow_tree_foliage_4b.tres" type="Material" id=9]
+
+[node name="Snow Tree Small 1" instance=ExtResource( 6 )]
+
+[node name="TreeFoliage1" parent="." index="1"]
+material_override = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="TreeFoliage2" parent="." index="2"]
+material_override = ExtResource( 8 )
+texture = ExtResource( 5 )
+
+[node name="TreeFoliage3" parent="." index="3"]
+material_override = ExtResource( 7 )
+texture = ExtResource( 2 )
+
+[node name="TreeFoliage4" parent="." index="4"]
+material_override = ExtResource( 9 )
+texture = ExtResource( 1 )

@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/tree_foliage_3.tres" type="Material" id=1]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/tree_foliage_1.tres" type="Material" id=2]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/tree_foliage_2.tres" type="Material" id=3]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/materials/tree_foliage_4.tres" type="Material" id=4]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/tree_foliage_4.png" type="Texture" id=5]
+[ext_resource path="res://nodes/weather/wind/WindblownSprite3D.gd" type="Script" id=6]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/tree_foliage_2.png" type="Texture" id=7]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/tree_foliage_1.png" type="Texture" id=8]
+[ext_resource path="res://mods/cat_tree_mesh/objects/tree_1/tree_foliage_3.png" type="Texture" id=9]
+[ext_resource path="res://world/objects/static_physics/tree_1/treetrunk_1.mesh" type="ArrayMesh" id=10]
+
+[sub_resource type="CylinderShape" id=1]
+height = 5.5
+radius = 0.75
+
+[node name="Tree Small 1" type="Spatial"]
+
+[node name="treetrunk_1" type="MeshInstance" parent="."]
+mesh = ExtResource( 10 )
+
+[node name="TreeFoliage1" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 5.2, 0 )
+material_override = ExtResource( 2 )
+pixel_size = 0.125
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource( 8 )
+script = ExtResource( 6 )
+
+[node name="TreeFoliage2" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 4.5, 0 )
+material_override = ExtResource( 3 )
+pixel_size = 0.125
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource( 7 )
+script = ExtResource( 6 )
+
+[node name="TreeFoliage3" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 3.8, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.125
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+
+[node name="TreeFoliage4" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 3, 0 )
+material_override = ExtResource( 4 )
+pixel_size = 0.125
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75, 0 )
+shape = SubResource( 1 )

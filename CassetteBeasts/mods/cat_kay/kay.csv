@@ -1,0 +1,17 @@
+keys,en
+KAYLEIGH_NAME,Kay
+INTRO_KAYLEIGH12,"I’m Kay. Nice to make your acquaintance, {player}!"
+INTRO_PENSBY22,"Ah, wonderful. You’re awake. Kay gave me quite a fright when she came knocking at my door."
+INTRO_PENSBY27,"Kay, you haven’t told her...?"
+INTRO_PENSBY27.m,"Kay, you haven’t told him...?"
+QUEST_TUTORIAL_DESCRIPTION1,Speak to Kay at the Harbourtown East entrance.
+ITEM_TUTORIAL_DESCRIPTION,A handbook that Kay left for you. You can read this to review what you’ve learned about life on the island of New Wirral.
+ITEM_TUTORIAL_NO_TUTS,Go meet Kay east of Harbourtown first!
+ITEM_TYPE_CHART_DESCRIPTION,A diagram on a card that fell out of the Ranger Handbook Kay left for you. It details the elemental types of the monsters of New Wirral and how to use them to your advantage.
+ACHIEVEMENT_NAME_partner_kayleigh,Kay
+QUEST_TUTORIAL_DESCRIPTION2,Follow Kay’s directions.
+RESTING_KAYLEIGH_PLATONIC_1,Kay engages you with an enthusiastic discussion on your favourite dog breeds.
+RESTING_KAYLEIGH_PLATONIC_2,You and Kay casually discuss the mysteries of New Wirral.
+RESTING_KAYLEIGH_PLATONIC_3,Kay tells you a funny anecdote about her life.
+RESTING_KAYLEIGH_PLATONIC_4,Kay tells you about her various ventures helping out the people of Harbourtown.
+QUEST_TUTORIAL_DESCRIPTION3,Accompany Kay to the broken pathway.
