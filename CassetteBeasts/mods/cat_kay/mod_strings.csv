@@ -1,9 +1,11 @@
 keys,en
+MOD_CAT_KAY_NAME,Call me Kay
 KAYLEIGH_NAME,Kay
 INTRO_KAYLEIGH12,"I’m Kay. Nice to make your acquaintance, {player}!"
 INTRO_PENSBY22,"Ah, wonderful. You’re awake. Kay gave me quite a fright when she came knocking at my door."
-INTRO_PENSBY27,"Kay, you haven’t told her...?"
+INTRO_PENSBY27.f,"Kay, you haven’t told her...?"
 INTRO_PENSBY27.m,"Kay, you haven’t told him...?"
+INTRO_PENSBY27.n,"Kay, you haven’t told them...?"
 QUEST_TUTORIAL_DESCRIPTION1,Speak to Kay at the Harbourtown East entrance.
 ITEM_TUTORIAL_DESCRIPTION,A handbook that Kay left for you. You can read this to review what you’ve learned about life on the island of New Wirral.
 ITEM_TUTORIAL_NO_TUTS,Go meet Kay east of Harbourtown first!
