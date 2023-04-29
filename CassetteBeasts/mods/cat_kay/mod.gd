@@ -7,7 +7,7 @@ var live_translation := Translation.new()
 
 func init_content() -> void:
 	# Replace voice line from mod directory
-	var res: Resource = preload("res://mods/cat_kay/kay_introduction.wav")
+	var res: Resource = preload("kay_introduction.wav")
 	res.take_over_path("res://sfx/voices/kayleigh/kayleigh_introduction.wav")
 
 	# If we're in the Editor and the output file exists,
