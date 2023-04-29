@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://mods/cat_translation_patcher/content.gd" type="Script" id=1]
+[ext_resource path="res://mods/cat_translation_patcher/mod.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
 id = "cat_translation_patcher"
-name = "Translation Patcher"
-version_code = 1
-version_string = "1.0.1"
+name = "MOD_CAT_TRANSLATION_PATCHER_NAME"
+version_code = 2
+version_string = "1.0.2"
 author = "cat"
 save_file_format_tag = ""
 save_file_format_tag_version = 0
