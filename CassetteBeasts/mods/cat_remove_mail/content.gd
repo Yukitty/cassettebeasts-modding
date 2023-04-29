@@ -1,7 +1,7 @@
 extends ContentInfo
 
 func init_content() -> void:
-	TranslationServer.add_translation(preload("res://mods/cat_remove_mail/mod_strings.en.translation"))
+	TranslationServer.add_translation(preload("mod_strings.en.translation"))
 	DLC.get_tree().connect("node_added", self, "_on_node_added", [], CONNECT_DEFERRED)
 
 func _on_node_added(node: Node) -> void:
