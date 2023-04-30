@@ -2,13 +2,22 @@ extends ContentInfo
 
 const OUTPUT_FILE = "user://mod_output/cat_kay/mod_strings.csv"
 
+const RESOURCE_OVERRIDES: Dictionary = {
+	"res://sfx/voices/kayleigh/kayleigh_introduction.wav":
+		preload("kay_introduction.wav"),
+	"res://sfx/voices/dorian/dorian_story_1.wav":
+		preload("dorian_story_1.wav"),
+}
+
 var csv := File.new()
 var live_translation := Translation.new()
 
 func init_content() -> void:
-	# Replace voice line from mod directory
-	var res: Resource = preload("kay_introduction.wav")
-	res.take_over_path("res://sfx/voices/kayleigh/kayleigh_introduction.wav")
+	# Replace voice lines from mod directory
+	var res: Resource
+	for k in RESOURCE_OVERRIDES:
+		res = RESOURCE_OVERRIDES[k]
+		res.take_over_path(k)
 
 	# If we're in the Editor and the output file exists,
 	# open it up and prepare to write to it.
