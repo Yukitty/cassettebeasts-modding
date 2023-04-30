@@ -2,7 +2,7 @@
 
 ## License
 
-This repository's license applies to the included assets only, and only to such extent as those assets have been newly created OR the modifications which distinguish them from their source material. This repository is entangled and dependant on commercial assets to which I own no rights. Use at your own risk.
+This repository's license applies to the included assets only, and only to those assets have been newly created OR to the modifications which distinguish modified assets from their source material. This repository is entangled and dependant on commercial assets to which no rights have been granted. Use at your own risk.
 
 ## How to use
 
