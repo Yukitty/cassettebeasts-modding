@@ -1,7 +1,29 @@
 extends ContentInfo
 
 # Don't try this at home! I'm a professional!
-func init_content() -> void:
+func _init() -> void:
+	TranslationServer.add_translation(preload("mod_strings.en.translation"))
+	_init_cheat_mod()
+	_update_monster_spawn_config()
+
+func _init_cheat_mod() -> void:
+	var script: GDScript = preload("file_button.gd")
+	script.take_over_path("res://menus/title/FileButton.gd")
+	SaveSystem.connect("file_loaded", self, "_mark_cheated")
+	_disable_achievements()
+
+func _mark_cheated() -> void:
+	SaveState.has_cheated = true
+
+func _disable_achievements() -> void:
+	var script: GDScript = preload("platform.gd")
+	script.take_over_path("res://addons/platform/Platform.gd")
+	Platform.set_script(script)
+	Platform.notification(Node.NOTIFICATION_READY)
+
+func _update_monster_spawn_config() -> void:
+	# Updating class_name scripts is hard!
+
 	# First we load the original source code into a giant string.
 	# Our metadata.tres marked this file as modified so it would be exported,
 	# otherwise it would only be compiled bytecode we can't easily edit.
@@ -25,17 +47,3 @@ func init_content() -> void:
 	# Then we load that string into the global class_name const
 	MonsterSpawnConfig.source_code = source_code
 	MonsterSpawnConfig.reload()
-
-	# Repeat for all modified script files.
-	# This one is an Autoload, so it's handled slightly different.
-	f.open("res://global/scene_manager/SceneManager.gd", File.READ)
-	source_code = f.get_as_text()
-	f.close()
-	source_code = source_code.replace(
-		"\tPlatform.set_achievements_enabled(in_game)\n",
-		"")
-	var script: GDScript = GDScript.new()
-	script.take_over_path("res://global/scene_manager/SceneManager.gd")
-	script.source_code = source_code
-	script.reload()
-	SceneManager.set_script(script)
